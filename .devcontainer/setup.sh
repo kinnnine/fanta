@@ -1,12 +1,12 @@
 #!/bin/bash
 
 # essential packages to install
-packages="file 7zip extrepo"
+packages="file 7zip extrepo ffmpeg"
 
 sudo apt update
 sudo apt upgrade -y
 for package in $packages; do
-    sudo apt install -y $package
+    sudo apt install -y $package --no-install-recommends
 done
 
 # setup mise
